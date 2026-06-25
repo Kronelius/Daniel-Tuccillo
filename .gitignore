@@ -1,3 +1,6 @@
+# Local Claude Code preview tooling (keep it out of the published site)
+.claude/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
