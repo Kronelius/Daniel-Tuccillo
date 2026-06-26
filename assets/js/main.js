@@ -2,24 +2,45 @@
 (function () {
   'use strict';
 
-  // --- Mobile nav toggle ---
+  var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('nav-menu');
+  var hero = document.querySelector('.hero');
 
+  function closeMenu() {
+    if (!menu || !toggle) return;
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    if (header) header.classList.remove('nav-open');
+  }
+
+  // --- Mobile nav toggle ---
   if (toggle && menu) {
     toggle.addEventListener('click', function () {
       var open = menu.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if (header) header.classList.toggle('nav-open', open);
     });
     menu.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-      }
+      if (e.target.closest('a')) closeMenu();
     });
   }
+
+  // --- Header: transparent over the hero, solid once scrolled past it ---
+  function headerH() {
+    var v = getComputedStyle(document.documentElement).getPropertyValue('--header-h');
+    return parseInt(v, 10) || 68;
+  }
+  function onScroll() {
+    if (!header) return;
+    var threshold = hero ? Math.max(40, hero.offsetHeight - headerH()) : 60;
+    header.classList.toggle('scrolled', window.scrollY > threshold);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
 
   // --- Footer year ---
   var yearEl = document.getElementById('year');

@@ -42,13 +42,14 @@
   --r-sm: 10px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-pill: 9999px;
 
   --maxw: 1120px;
+  --header-h: 68px;
   --font-display: 'Abril Fatface', Georgia, 'Times New Roman', serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
 }
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: var(--header-h); }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -133,29 +134,48 @@ p { margin: 0 0 1rem; }
 .thumb-label { font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--primary-light); }
 .thumb-label small { display: block; margin-top: .4rem; font-weight: 500; letter-spacing: 0; text-transform: none; font-size: .72rem; color: var(--muted); }
 
-/* ---------- Header ---------- */
+/* ---------- Header (overlays the hero; turns solid on scroll) ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(251,248,240,.82); backdrop-filter: saturate(140%) blur(12px);
-  border-bottom: 1px solid var(--card-border);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  background: transparent; border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.05rem; }
-.brand-mark { display: inline-flex; filter: drop-shadow(0 1px 2px rgba(122,95,24,.2)); }
+.site-header.scrolled {
+  background: rgba(251,248,240,.85);
+  -webkit-backdrop-filter: saturate(140%) blur(12px); backdrop-filter: saturate(140%) blur(12px);
+  border-bottom-color: var(--card-border); box-shadow: 0 4px 20px rgba(122,95,24,.08);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 700; font-size: 1.05rem; color: #F6EFD9; transition: color .25s ease; }
+.brand-mark { display: inline-flex; filter: drop-shadow(0 1px 3px rgba(0,0,0,.35)); }
 .nav { display: flex; align-items: center; }
 .nav-menu { list-style: none; display: flex; align-items: center; gap: 1.5rem; margin: 0; padding: 0; }
-.nav-menu a { text-decoration: none; color: var(--text-body); font-weight: 500; font-size: .94rem; transition: color .15s ease; }
-.nav-menu a:hover { color: var(--text); }
+.nav-menu a { text-decoration: none; color: #E4D9BB; font-weight: 500; font-size: .94rem; transition: color .15s ease; }
+.nav-menu a:hover { color: #fff; }
 .nav-cta { color: var(--on-gold) !important; }
 .nav-toggle { display: none; }
+
+/* Solid state (scrolled past hero, or mobile menu open) → dark text on cream */
+.site-header.scrolled .brand,
+.site-header.nav-open .brand { color: var(--text); }
+.site-header.scrolled .brand-mark,
+.site-header.nav-open .brand-mark { filter: drop-shadow(0 1px 2px rgba(122,95,24,.2)); }
+.site-header.scrolled .nav-menu a,
+.site-header.nav-open .nav-menu a { color: var(--text-body); }
+.site-header.scrolled .nav-menu a:hover,
+.site-header.nav-open .nav-menu a:hover { color: var(--text); }
+.site-header.scrolled .nav-cta,
+.site-header.nav-open .nav-cta { color: var(--on-gold) !important; }
 
 /* ---------- Hero (dark "Midnight Luxe" contrast band) ---------- */
 .hero {
   position: relative; color: #F4ECD2;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
   background:
     radial-gradient(ellipse 70% 60% at 82% -8%, rgba(201,168,76,.22), transparent 60%),
     linear-gradient(160deg, #241b04 0%, #15110a 100%);
-  padding: clamp(3rem, 7vw, 5.2rem) 0 clamp(3rem, 6vw, 4.6rem);
+  padding: calc(var(--header-h) + 2rem) 0 2.5rem;
 }
 .hero-inner { display: grid; grid-template-columns: 1.08fr .92fr; gap: 3rem; align-items: center; }
 .hero h1 {
@@ -186,7 +206,7 @@ p { margin: 0 0 1rem; }
 
 /* Hero photo + floating glass "recently shipped" card */
 .hero-photo {
-  position: relative; min-height: 460px; border-radius: 22px; overflow: hidden;
+  position: relative; min-height: clamp(420px, 58vh, 600px); border-radius: 22px; overflow: hidden;
   background: linear-gradient(155deg, #41371b 0%, #241b04 60%, #181206 100%);
   border: 1px solid rgba(212,185,106,.22); box-shadow: 0 26px 64px rgba(0,0,0,.42);
 }
@@ -328,12 +348,14 @@ html.js [data-reveal].is-visible { opacity: 1; transform: none; }
     display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
     width: 44px; height: 44px; background: transparent; border: 0; cursor: pointer; padding: 10px;
   }
-  .nav-toggle span { display: block; height: 2px; background: var(--text); border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+  .nav-toggle span { display: block; height: 2px; background: #F6EFD9; border-radius: 2px; transition: transform .2s ease, opacity .2s ease, background .25s ease; }
+  .site-header.scrolled .nav-toggle span,
+  .site-header.nav-open .nav-toggle span { background: var(--text); }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .nav-menu {
-    position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0;
+    position: absolute; top: var(--header-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--nav); border-bottom: 1px solid var(--card-border); padding: .5rem 24px 1.2rem;
     box-shadow: var(--sh-2); transform: translateY(-12px); opacity: 0; pointer-events: none;
     transition: transform .2s ease, opacity .2s ease;
