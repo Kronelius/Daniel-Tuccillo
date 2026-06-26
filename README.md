@@ -52,11 +52,16 @@ Colors live in the `:root` block at the top of `assets/css/styles.css`.
    placeholders (search `TODO` in `index.html`). Set them to the real URLs.
 2. **Project screenshots** — drop files in `assets/img/work/` and swap each card's
    placeholder for the commented `<img>` (see `assets/img/work/README.md`).
-3. **Your photo** — add `assets/img/daniel.jpg` and replace the photo placeholder
-   in the About section.
+3. **Your photo** — add `assets/img/daniel.jpg`. It drives the dark hero panel
+   (replace the `.hero-photo-ph` block with an `<img>`) and the About section. For
+   the hero, use a well-lit shot with a darker/simple background so it blends with
+   the Midnight palette. (Wire-in pending the photo file.)
 4. **Contact form** — the form posts to a Formspree placeholder. Create a form at
    <https://formspree.io>, then paste your endpoint into the `<form action>`.
 5. **og-image** — add `assets/img/og-image.png` (1200×630) for link previews.
+6. **Dark-glass accents (optional)** — decide whether to carry the hero's
+   warm-glass / Midnight contrast into other sections (e.g. the contact form) or
+   keep the dark treatment exclusive to the hero.
 
 ## Deploy on GitHub Pages
 
