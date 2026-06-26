@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Tuccillo — Automation for Home Service Businesses</title>
-  <meta name="description" content="I automate the busywork out of home service businesses — lead capture, follow-up, scheduling, and software consolidation. Built by a real operator, not a generic dev shop." />
+  <title>Daniel Tuccillo — Builder. Automation &amp; apps for home service businesses.</title>
+  <meta name="description" content="I'm Daniel — a Seattle builder. I make practical automation and custom apps for home service businesses, and I ship my own products. Here's some of what I've built." />
 
-  <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Daniel Tuccillo — Automation for Home Service Businesses" />
-  <meta property="og:description" content="Capture every lead, automate the busywork, and stop overpaying for bloated software. Done-for-you automation for home service companies." />
+  <meta property="og:title" content="Daniel Tuccillo — Builder" />
+  <meta property="og:description" content="Practical automation and custom apps for home service businesses — plus a few products I ship myself." />
   <meta property="og:image" content="assets/img/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#F6F2E8" />
 
-  <!-- Inline SVG favicon: "DT" automation mark -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1f3a'/%3E%3Cpath d='M17 6 9 18h5l-1 8 8-12h-5z' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <!-- Inline SVG favicon: Daylight Gilt "DT" mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C9A84C'/%3E%3Cpath d='M17 6 9 18h5l-1 8 8-12h-5z' fill='%23241B04'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Abril+Fatface&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -28,7 +29,7 @@
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Daniel Tuccillo home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="7" fill="#0b1f3a"/><path d="M17 6 9 18h5l-1 8 8-12h-5z" fill="#f59e0b"/></svg>
+          <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="8" fill="#C9A84C"/><path d="M17 6 9 18h5l-1 8 8-12h-5z" fill="#241B04"/></svg>
         </span>
         <span class="brand-text">Daniel&nbsp;Tuccillo</span>
       </a>
@@ -38,12 +39,11 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="#services">Services</a></li>
           <li><a href="#work">Work</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#approach">What I do</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" class="btn btn-sm btn-primary nav-cta">Get in touch</a></li>
+          <li><a href="#contact" class="btn btn-sm btn-primary nav-cta">Say hi</a></li>
         </ul>
       </nav>
     </div>
@@ -54,386 +54,258 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Automation &amp; AI for home service businesses</p>
-          <h1>I take the busywork off your plate so you can run the jobs.</h1>
-          <p class="lead">
-            Capture every lead, automate the follow-up, and stop overpaying for bloated software.
-            I'm a 11-year operator who builds practical automation for plumbers, HVAC, electrical,
-            landscaping, cleaning, and other home service companies &mdash; not a generic dev shop.
+          <span class="badge"><span class="dot"></span> Available for new projects</span>
+          <h1>I build automation &amp; apps for <span class="gild">home service businesses</span> — and ship <span class="gild">my own products</span> on the side.</h1>
+          <p class="hero-lead">
+            I'm Daniel — a Seattle builder. I spent 11+ years running and selling inside service businesses
+            before I started automating them, so I make the missed-call follow-ups, the double-entry, and the
+            bloated software bills disappear. When I'm not building for clients, I ship my own apps.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-lg">Book a free discovery call</a>
-            <a href="#services" class="btn btn-ghost btn-lg">See what I build</a>
+            <a href="#work" class="btn btn-primary btn-lg">See what I've built</a>
+            <a href="#contact" class="btn btn-secondary btn-lg">Let's talk</a>
           </div>
-          <ul class="hero-trust">
-            <li><strong>11+ yrs</strong> running service &amp; sales teams</li>
-            <li><strong>2</strong> automation companies founded</li>
-            <li><strong>TCPA-compliant</strong> human-first AI</li>
-          </ul>
-        </div>
-
-        <div class="hero-panel" aria-hidden="false">
-          <div class="panel-card">
-            <div class="panel-row">
-              <span class="dot dot-live"></span>
-              <span>New lead from website</span>
-              <span class="panel-time">0s</span>
-            </div>
-            <div class="panel-row">
-              <span class="dot"></span>
-              <span>Instant text + AI reply sent</span>
-              <span class="panel-time">3s</span>
-            </div>
-            <div class="panel-row">
-              <span class="dot"></span>
-              <span>Qualified &amp; booked on calendar</span>
-              <span class="panel-time">2m</span>
-            </div>
-            <div class="panel-row">
-              <span class="dot"></span>
-              <span>Job synced to your CRM</span>
-              <span class="panel-time">2m</span>
-            </div>
-            <div class="panel-row panel-row-quiet">
-              <span class="dot"></span>
-              <span>Review request after completion</span>
-              <span class="panel-time">auto</span>
-            </div>
-          </div>
-          <p class="panel-caption">A lead-to-booked flow that runs while you're on the truck.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== TRUST BAR ===================== -->
-    <section class="logos">
-      <div class="container">
-        <p class="logos-label">Replaces, connects, or rebuilds the tools you already know</p>
-        <ul class="logos-list">
-          <li>ServiceTitan</li>
-          <li>Jobber</li>
-          <li>HouseCall&nbsp;Pro</li>
-          <li>GoHighLevel</li>
-          <li>Zapier / Make</li>
-          <li>QuickBooks</li>
-          <li>Twilio</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===================== SERVICES ===================== -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What I do</p>
-          <h2>Done-for-you automation, built around how you actually work</h2>
-          <p class="section-sub">
-            Every business is a little different. I start with your real workflow, then automate the
-            parts that leak leads, eat your evenings, or cost you in software you don't need.
+          <p class="hero-trust">
+            <strong>11+ years in the operator's chair</strong> · Founder of LeadStart AI &amp; SaaSassins · TCPA-compliant, human-first.
           </p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">⚡</div>
-            <h3>Lead capture &amp; instant follow-up</h3>
-            <p>
-              Missed-call text-back, website chat, and AI voice agents that answer in seconds,
-              qualify the lead, and book the job &mdash; so you never lose work to whoever called back first.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🔁</div>
-            <h3>Workflow &amp; process automation</h3>
-            <p>
-              Scheduling, dispatch reminders, invoicing, estimate follow-ups, and review requests
-              wired together so the routine stuff happens without anyone touching it.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🧩</div>
-            <h3>Software consolidation &amp; custom apps</h3>
-            <p>
-              Tired of paying for ServiceTitan or GoHighLevel features you don't use? I right-size your
-              stack &mdash; or build a custom app you own outright &mdash; and connect what's left.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">📋</div>
-            <h3>Business process consulting</h3>
-            <p>
-              Before automating anything, I map how your business really runs and find the bottlenecks.
-              Eleven years of managing and selling means I fix the process, not just the tooling.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== OUTCOMES ===================== -->
-    <section class="section section-alt" id="outcomes">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Why it pays off</p>
-          <h2>Less admin, faster responses, fewer subscriptions</h2>
-        </div>
-        <div class="outcomes">
-          <div class="outcome">
-            <h3>Respond in seconds, not hours</h3>
-            <p>Speed-to-lead is the #1 driver of booked jobs. Automated first contact means you're always first.</p>
-          </div>
-          <div class="outcome">
-            <h3>Stop paying for shelf-ware</h3>
-            <p>Most service businesses pay for 3&ndash;5 overlapping tools. I cut the overlap and the monthly bill.</p>
-          </div>
-          <div class="outcome">
-            <h3>Win back your evenings</h3>
-            <p>Quoting, reminders, and follow-ups run on their own so the office work doesn't follow you home.</p>
-          </div>
-          <div class="outcome">
-            <h3>Keep the human touch</h3>
-            <p>Automation handles the busywork; your team handles the relationship. No spammy AI slop, ever.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== SELECTED WORK ===================== -->
-    <!--
-      Each card links out to the live site. To add a screenshot, drop a file in
-      assets/img/work/ and swap the .work-thumb contents for the commented <img>.
-      TODO links: set the SaaSassins, GLD, and ReciPal hrefs to their live URLs.
-    -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Selected work</p>
-          <h2>A few things I've built</h2>
-          <p class="section-sub">
-            Client sites and products spanning home service businesses, lead generation,
-            and full-stack apps. Click any project to see it live.
-          </p>
-        </div>
-
-        <div class="work-grid">
-
-          <!-- 1 · Rainier Facility Solutions -->
-          <a class="work-card" href="https://rainierfacilitysolutions.com" target="_blank" rel="noopener">
-            <div class="work-thumb">
-              <!-- <img src="assets/img/work/rainier.png" alt="Rainier Facility Solutions website" /> -->
-              <span class="work-thumb-label">Add screenshot<small>assets/img/work/rainier.png</small></span>
+        <aside class="hero-aside">
+          <div class="card-gold">
+            <div class="inner">
+              <div class="shipped-head">Recently shipped</div>
+              <div class="shipped-row"><span class="dot"></span><span><span class="nm">Rainier Facility Solutions</span><br><span class="role">Client site</span></span><span class="role">Live</span></div>
+              <div class="shipped-row"><span class="dot"></span><span><span class="nm">LeadStart AI</span><br><span class="role">Founder</span></span><span class="role">Live</span></div>
+              <div class="shipped-row"><span class="dot"></span><span><span class="nm">SaaSassins</span><br><span class="role">Co-founder</span></span><span class="role">Live</span></div>
+              <div class="shipped-row"><span class="dot"></span><span><span class="nm">GLD</span><br><span class="role">Personal product</span></span><span class="role">Live</span></div>
+              <div class="shipped-row"><span class="dot beta"></span><span><span class="nm">ReciPal</span><br><span class="role">Personal product</span></span><span class="role">Beta</span></div>
             </div>
-            <div class="work-body">
-              <div class="work-head">
-                <h3>Rainier Facility Solutions</h3>
-                <span class="work-cat">Client &middot; Home services</span>
-              </div>
-              <p>Marketing site and lead engine for a Seattle commercial cleaning company &mdash; multi-step quote wizard, instant lead capture, and TCPA-compliant SMS opt-in.</p>
-              <ul class="work-tags"><li>Lead capture</li><li>Quote wizard</li><li>SMS compliance</li><li>SEO</li></ul>
-              <span class="work-link">Visit site &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 2 · LeadStart AI -->
-          <a class="work-card" href="https://www.leadstartai.com" target="_blank" rel="noopener">
-            <div class="work-thumb">
-              <!-- <img src="assets/img/work/leadstart.png" alt="LeadStart AI platform" /> -->
-              <span class="work-thumb-label">Add screenshot<small>assets/img/work/leadstart.png</small></span>
-            </div>
-            <div class="work-body">
-              <div class="work-head">
-                <h3>LeadStart AI</h3>
-                <span class="work-cat">Product &middot; Founder</span>
-              </div>
-              <p>An AI-driven outreach platform that captures, qualifies, and routes leads &mdash; with automated reply handling so hot prospects never wait on a callback.</p>
-              <ul class="work-tags"><li>AI</li><li>Lead gen</li><li>Automation</li><li>Next.js</li></ul>
-              <span class="work-link">Visit site &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 3 · SaaSassins -->
-          <!-- TODO: replace href="#" with the live SaaSassins URL -->
-          <a class="work-card" href="#" target="_blank" rel="noopener">
-            <div class="work-thumb">
-              <!-- <img src="assets/img/work/saasassins.png" alt="SaaSassins operations app" /> -->
-              <span class="work-thumb-label">Add screenshot<small>assets/img/work/saasassins.png</small></span>
-            </div>
-            <div class="work-body">
-              <div class="work-head">
-                <h3>SaaSassins</h3>
-                <span class="work-cat">Product &middot; Co-founder</span>
-              </div>
-              <p>An all-in-one operations app for service businesses &mdash; scheduling, CRM, billing, and client portals you own outright instead of renting forever.</p>
-              <ul class="work-tags"><li>CRM</li><li>Billing</li><li>Client portals</li><li>Supabase</li></ul>
-              <span class="work-link">Visit site &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 4 · GLD -->
-          <!-- TODO: replace href="#" with the live GLD URL -->
-          <a class="work-card" href="#" target="_blank" rel="noopener">
-            <div class="work-thumb">
-              <!-- <img src="assets/img/work/gld.png" alt="GLD habit and fitness tracker" /> -->
-              <span class="work-thumb-label">Add screenshot<small>assets/img/work/gld.png</small></span>
-            </div>
-            <div class="work-body">
-              <div class="work-head">
-                <h3>GLD</h3>
-                <span class="work-cat">Product</span>
-              </div>
-              <p>A mobile-first habit and fitness tracking app with streaks, goal stakes, and progress insights &mdash; built as an installable PWA for daily use.</p>
-              <ul class="work-tags"><li>PWA</li><li>React</li><li>Full-stack</li><li>Mobile</li></ul>
-              <span class="work-link">Visit site &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 5 · ReciPal -->
-          <!-- TODO: replace href="#" with the live ReciPal URL -->
-          <a class="work-card" href="#" target="_blank" rel="noopener">
-            <div class="work-thumb">
-              <!-- <img src="assets/img/work/recipal.png" alt="ReciPal recipe and meal planning app" /> -->
-              <span class="work-thumb-label">Add screenshot<small>assets/img/work/recipal.png</small></span>
-            </div>
-            <div class="work-body">
-              <div class="work-head">
-                <h3>ReciPal</h3>
-                <span class="work-cat">Product</span>
-              </div>
-              <p>A smart recipe and meal-planning app that matches meals to your pantry, macros, and goals &mdash; with AI-assisted weekly plans and grocery integration.</p>
-              <ul class="work-tags"><li>AI</li><li>Full-stack</li><li>Meal planning</li><li>Mobile</li></ul>
-              <span class="work-link">Visit site &rarr;</span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <p class="eyebrow">Who you're working with</p>
-          <h2>An operator who automates &mdash; not a vendor who guesses</h2>
-          <p>
-            I'm Daniel Tuccillo. For 11+ years I managed and sold inside service-driven, customer-facing
-            businesses, so I've lived the missed calls, the double-entry, and the software bills that creep
-            up every quarter. That's the perspective I bring to every build.
-          </p>
-          <p>
-            I founded <strong>SaaSassins</strong>, where we replace expensive all-in-one platforms with
-            apps service businesses own outright, and <strong>LeadStart AI</strong>, where we build
-            chatbots, voice agents, and lead-capture systems. I take that same toolkit into one-off gigs &mdash;
-            whether you need a single automation wired up or your whole back office streamlined.
-          </p>
-          <ul class="about-points">
-            <li>Real management &amp; sales background (former licensed WA real estate broker)</li>
-            <li>Founder of two automation companies</li>
-            <li>Ethical, TCPA-compliant AI &mdash; built to keep you compliant and trusted</li>
-            <li>Greater Seattle Area &middot; working with service businesses remotely nationwide</li>
-          </ul>
-        </div>
-        <aside class="about-aside">
-          <div class="aside-card">
-            <h3>Good fit if you're a&hellip;</h3>
-            <ul>
-              <li>Plumbing, HVAC, or electrical company</li>
-              <li>Landscaping, cleaning, or pest control</li>
-              <li>Roofing, painting, or remodeling</li>
-              <li>Any local service business drowning in admin</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-block">Let's talk</a>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- ===================== PROCESS ===================== -->
-    <section class="section section-dark" id="process">
+    <!-- ===================== CLIENT WORK ===================== -->
+    <!--
+      Screenshots are stubbed. To add one, drop a file in assets/img/work/ and
+      replace the <span class="thumb-label">…</span> with: <img src="assets/img/work/rainier.png" alt="…">.
+      TODO: set SaaSassins / GLD / ReciPal hrefs to their live URLs.
+    -->
+    <section class="section section-line" id="work">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">How it works</p>
-          <h2>Simple, low-risk, and built to hand off</h2>
-          <p class="section-sub">No retainers required to start. We begin small, prove the value, then expand.</p>
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Selected work</span>
+          <h2 class="display">Things I've built for clients</h2>
+          <p class="section-sub">Real businesses, shipped and live. Here's the marquee one.</p>
         </div>
-        <ol class="steps">
-          <li class="step">
-            <span class="step-num">1</span>
-            <h3>Free discovery call</h3>
-            <p>A 30-minute call to understand your business, your tools, and where the time and leads leak out.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">2</span>
-            <h3>Audit &amp; roadmap</h3>
-            <p>I map your workflow and send a clear, fixed-scope plan &mdash; what I'll build, what it costs, what it saves.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">3</span>
-            <h3>Build &amp; integrate</h3>
-            <p>I build and connect everything, test it against real scenarios, and keep you in the loop the whole way.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">4</span>
-            <h3>Train &amp; hand off</h3>
-            <p>Your team gets trained and documented systems you control. Ongoing support is available, never required.</p>
-          </li>
-        </ol>
+
+        <a class="feature card-gold" href="https://rainierfacilitysolutions.com" target="_blank" rel="noopener" data-reveal>
+          <div class="inner">
+            <div class="thumb">
+              <!-- <img src="assets/img/work/rainier.png" alt="Rainier Facility Solutions website" /> -->
+              <span class="thumb-label">Add screenshot<small>assets/img/work/rainier.png</small></span>
+            </div>
+            <div class="feature-body">
+              <p class="proj-meta">2026 · Client site · HTML/CSS · Vercel</p>
+              <h3>Rainier Facility Solutions</h3>
+              <p>A marketing site and lead engine for a Seattle commercial cleaning company. I built a multi-step quote wizard and instant lead capture, with TCPA-compliant SMS opt-in baked in — so every job request gets answered fast and stays compliant.</p>
+              <ul class="tags"><li>Lead capture</li><li>Quote wizard</li><li>SMS compliance</li><li>SEO</li></ul>
+              <span class="proj-link">Visit site &rarr;</span>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
 
-    <!-- ===================== FAQ ===================== -->
-    <section class="section" id="faq">
-      <div class="container faq-wrap">
-        <div class="section-head section-head-left">
-          <p class="eyebrow">Questions</p>
-          <h2>The things people ask first</h2>
+    <!-- ===================== PRODUCTS ===================== -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Made by me</span>
+          <h2 class="display">Products I ship myself</h2>
+          <p class="section-sub">When I'm not building for clients, I build for me. A couple are real businesses; a couple are for the love of it.</p>
         </div>
-        <div class="faq">
-          <details>
-            <summary>Do I have to replace my current software?</summary>
-            <p>No. Plenty of gigs are just connecting tools you already pay for so they actually talk to each other. If you <em>are</em> overpaying, I'll show you where &mdash; but the call is always yours.</p>
-          </details>
-          <details>
-            <summary>What does a project cost?</summary>
-            <p>It depends on scope, which is exactly why the audit comes first. You get a fixed price before any work starts &mdash; no open-ended hourly surprises. Small automations often pay for themselves in the first month.</p>
-          </details>
-          <details>
-            <summary>Is the AI going to spam my customers?</summary>
-            <p>Never. I build TCPA-compliant, human-first systems. Automation handles speed and admin; your team keeps the relationship. No "AI slop," no risky mass-texting.</p>
-          </details>
-          <details>
-            <summary>Do you only work with Seattle businesses?</summary>
-            <p>I'm based in the Greater Seattle Area but work with home service companies remotely across the U.S.</p>
-          </details>
-          <details>
-            <summary>What happens after the project ends?</summary>
-            <p>You own the systems and get documentation plus team training. I offer ongoing support if you want it, but you're never locked in.</p>
-          </details>
+
+        <div class="product-grid">
+
+          <!-- LeadStart AI -->
+          <a class="product-card panel" href="https://www.leadstartai.com" target="_blank" rel="noopener" data-reveal>
+            <div class="thumb">
+              <!-- <img src="assets/img/work/leadstart.png" alt="LeadStart AI" /> -->
+              <span class="thumb-label">Add screenshot<small>assets/img/work/leadstart.png</small></span>
+            </div>
+            <div class="product-body">
+              <p class="proj-meta">Founder · Live</p>
+              <h3>LeadStart AI</h3>
+              <p>An AI outreach platform that captures, qualifies, and routes leads, then handles the replies — so hot prospects never wait on a callback.</p>
+              <ul class="tags"><li>AI</li><li>Lead gen</li><li>Next.js</li><li>Supabase</li></ul>
+              <span class="proj-link">Visit site &rarr;</span>
+            </div>
+          </a>
+
+          <!-- SaaSassins -->
+          <!-- TODO: replace href="#" with the live SaaSassins URL -->
+          <a class="product-card panel" href="#" target="_blank" rel="noopener" data-reveal>
+            <div class="thumb">
+              <!-- <img src="assets/img/work/saasassins.png" alt="SaaSassins" /> -->
+              <span class="thumb-label">Add screenshot<small>assets/img/work/saasassins.png</small></span>
+            </div>
+            <div class="product-body">
+              <p class="proj-meta">Co-founder · Live</p>
+              <h3>SaaSassins</h3>
+              <p>An all-in-one operations app for service businesses — scheduling, CRM, billing, client portals — that you own outright instead of renting forever.</p>
+              <ul class="tags"><li>CRM</li><li>Billing</li><li>Stripe</li><li>Supabase</li></ul>
+              <span class="proj-link">Visit site &rarr;</span>
+            </div>
+          </a>
+
+          <!-- GLD -->
+          <!-- TODO: replace href="#" with the live GLD URL -->
+          <a class="product-card panel" href="#" target="_blank" rel="noopener" data-reveal>
+            <div class="thumb">
+              <!-- <img src="assets/img/work/gld.png" alt="GLD" /> -->
+              <span class="thumb-label">Add screenshot<small>assets/img/work/gld.png</small></span>
+            </div>
+            <div class="product-body">
+              <p class="proj-meta">Personal product · Live</p>
+              <h3>GLD</h3>
+              <p>A habit &amp; fitness tracker I built for daily use: streaks with real stakes, workout logging, and mood-vs-habit insights. The "Daylight Gilt" look of this site comes from GLD.</p>
+              <ul class="tags"><li>PWA</li><li>React</li><li>Supabase</li><li>Mobile</li></ul>
+              <span class="proj-link">Visit site &rarr;</span>
+            </div>
+          </a>
+
+          <!-- ReciPal -->
+          <!-- TODO: replace href="#" with the live ReciPal URL -->
+          <a class="product-card panel" href="#" target="_blank" rel="noopener" data-reveal>
+            <div class="thumb">
+              <!-- <img src="assets/img/work/recipal.png" alt="ReciPal" /> -->
+              <span class="thumb-label">Add screenshot<small>assets/img/work/recipal.png</small></span>
+            </div>
+            <div class="product-body">
+              <p class="proj-meta">Personal product · Beta</p>
+              <h3>ReciPal</h3>
+              <p>A recipe and meal-planning app that matches meals to your pantry, macros, and goals — with AI-assisted weekly plans and grocery integration.</p>
+              <ul class="tags"><li>AI</li><li>Full-stack</li><li>Meal planning</li><li>Mobile</li></ul>
+              <span class="proj-link">Visit site &rarr;</span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
 
-    <!-- ===================== CONTACT / CTA ===================== -->
-    <section class="section contact" id="contact">
+    <!-- ===================== WHAT I DO ===================== -->
+    <section class="section section-line" id="approach">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">What I do</span>
+          <h2 class="display">How I can help</h2>
+          <p class="section-sub">Most of my client work is one of these. If any of it sounds like your week, let's talk.</p>
+        </div>
+
+        <div class="caps">
+          <div class="cap panel" data-reveal>
+            <h3><span class="ic" aria-hidden="true">⚡</span> Capture &amp; follow up on every lead</h3>
+            <p>Missed-call text-back, website chat, and AI voice agents that answer in seconds, qualify the lead, and book the job — so you stop losing work to whoever called back first.</p>
+          </div>
+          <div class="cap panel" data-reveal>
+            <h3><span class="ic" aria-hidden="true">🔁</span> Automate the busywork</h3>
+            <p>Scheduling, dispatch reminders, invoicing, estimate follow-ups, review requests — wired together so the routine stuff runs itself while you're on the job.</p>
+          </div>
+          <div class="cap panel" data-reveal>
+            <h3><span class="ic" aria-hidden="true">🧩</span> Consolidate your software — or replace it</h3>
+            <p>Paying for ServiceTitan or GoHighLevel features you never touch? I right-size your stack, connect what's left, or build a custom app you actually own.</p>
+          </div>
+          <div class="cap panel" data-reveal>
+            <h3><span class="ic" aria-hidden="true">📋</span> Untangle the process first</h3>
+            <p>Eleven years managing and selling means I fix how the work actually flows before automating it — not just bolt new tools onto an old mess.</p>
+          </div>
+        </div>
+
+        <p class="works-with" data-reveal>
+          <strong>Works with</strong> ServiceTitan, Jobber, HouseCall&nbsp;Pro, GoHighLevel, Zapier&nbsp;/&nbsp;Make, Twilio &amp; QuickBooks.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== NOW ===================== -->
+    <!-- Keep this fresh — edit it every month or two. It's what makes the site feel alive. -->
+    <section class="section" id="now">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Now</span>
+          <h2 class="display">What I'm building right now</h2>
+        </div>
+        <div class="now-card panel" data-reveal>
+          <p class="now-updated">Updated June 2026</p>
+          <ul class="now-list">
+            <li>Expanding LeadStart AI's reply handling and LinkedIn outreach.</li>
+            <li>Wiring up lead capture and SMS automation for a couple of home service clients.</li>
+            <li>Shipping new insight features in GLD between client work.</li>
+          </ul>
+          <p class="now-foot">Open to one or two new client projects this quarter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section section-line" id="about">
+      <div class="container about-grid">
+        <div class="about-photo panel" data-reveal>
+          <!-- Replace with: <img src="assets/img/daniel.jpg" alt="Daniel Tuccillo" /> -->
+          <div class="thumb"><span class="thumb-label">Add a photo<small>assets/img/daniel.jpg</small></span></div>
+        </div>
+        <div class="about-copy" data-reveal>
+          <span class="eyebrow">About</span>
+          <h2 class="display">The person behind the work</h2>
+          <p>
+            I'm Daniel Tuccillo. Before I wrote a line of automation, I spent 11+ years managing and selling
+            inside service-driven businesses — long enough to feel every missed call, every bit of double-entry,
+            and every software bill that crept up another notch each quarter. I was even a licensed real estate
+            broker here in Washington. So when I build for a home service company, I'm building from inside the
+            operator's chair, not guessing from a spec sheet.
+          </p>
+          <p>
+            These days I do two things. I build practical automation and custom apps for home service
+            businesses — plumbers, HVAC, cleaners, landscapers — and I ship my own products: LeadStart AI and
+            SaaSassins on the business side, GLD and ReciPal for the fun of it.
+          </p>
+          <p>
+            I care about work that's honest and human. No spammy mass-texting, no "AI slop," nothing that puts
+            you on the wrong side of TCPA. Automation should handle the busywork so your team can handle the
+            relationship. I'm based in the Greater Seattle area and work with service businesses remotely across
+            the U.S.
+          </p>
+          <ul class="chips">
+            <li>Greater Seattle Area</li>
+            <li>11+ yrs operator</li>
+            <li>Former WA broker</li>
+            <li>2 companies founded</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
       <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">Let's talk</p>
-          <h2>Tell me where the time and leads are leaking.</h2>
+        <div class="contact-copy" data-reveal>
+          <span class="eyebrow">Contact</span>
+          <h2 class="display">Got something you want made? Let's talk.</h2>
           <p class="section-sub">
-            Send a few details and I'll reply within one business day with whether I can help and what a
-            first step looks like. The discovery call is free and there's no pitch deck.
+            Tell me what you're building or where the time's going, and I'll get back to you within a business
+            day. No pitch, no funnel — just a real reply.
           </p>
           <ul class="contact-direct">
             <li><a href="mailto:daniel.tuccillo92@gmail.com">daniel.tuccillo92@gmail.com</a></li>
             <li><a href="https://www.linkedin.com/in/danieltuccillo/" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
+            <li><a href="https://github.com/Kronelius" target="_blank" rel="noopener">GitHub &rarr;</a></li>
           </ul>
         </div>
 
         <!-- Formspree-ready form. See README to activate (swap the action URL). -->
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form class="contact-form panel" action="https://formspree.io/f/your-form-id" method="POST" data-reveal>
           <div class="field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required autocomplete="name" />
@@ -443,15 +315,11 @@
             <input type="email" id="email" name="email" required autocomplete="email" />
           </div>
           <div class="field">
-            <label for="business">Business &amp; trade</label>
-            <input type="text" id="business" name="business" placeholder="e.g. Cascade Plumbing — residential plumbing" />
-          </div>
-          <div class="field">
-            <label for="message">What would you love to stop doing by hand?</label>
+            <label for="message">What are you building?</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block btn-lg">Send it over</button>
-          <p class="form-note">No spam, ever. Your details go straight to my inbox.</p>
+          <p class="form-note">Goes straight to my inbox. No spam, ever.</p>
         </form>
       </div>
     </section>
@@ -462,18 +330,24 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="24" height="24"><rect width="32" height="32" rx="7" fill="#0b1f3a"/><path d="M17 6 9 18h5l-1 8 8-12h-5z" fill="#f59e0b"/></svg>
+          <svg viewBox="0 0 32 32" width="24" height="24"><rect width="32" height="32" rx="8" fill="#C9A84C"/><path d="M17 6 9 18h5l-1 8 8-12h-5z" fill="#241B04"/></svg>
         </span>
         <span>Daniel Tuccillo</span>
       </div>
-      <p class="footer-tag">Automation &amp; AI for home service businesses &middot; Greater Seattle Area</p>
+      <p class="footer-tag">Builder in the Greater Seattle Area — automation for the trades, plus a few products I ship myself.</p>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#products">Products</a>
+        <a href="#approach">What I do</a>
         <a href="#about">About</a>
-        <a href="#process">How it works</a>
         <a href="#contact">Contact</a>
       </nav>
-      <p class="footer-copy">&copy; <span id="year">2026</span> Daniel Tuccillo. All rights reserved.</p>
+      <nav class="footer-social" aria-label="Social">
+        <a href="https://www.linkedin.com/in/danieltuccillo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Kronelius" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:daniel.tuccillo92@gmail.com">Email</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Daniel Tuccillo.</p>
     </div>
   </footer>
 

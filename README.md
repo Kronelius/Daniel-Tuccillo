@@ -1,68 +1,70 @@
 # Daniel Tuccillo — Personal Site
 
-A fast, zero-build landing page for booking automation & AI gig work with home
-service businesses. Plain HTML/CSS/JS — no framework, no build step, no
-dependencies to maintain. Deploys free on GitHub Pages (or Netlify/Vercel).
+A fast, zero-build personal **creator site** — "here's me and the things I build,"
+not an agency funnel. Plain HTML/CSS/JS, no framework, no build step. Deploys free
+on GitHub Pages (or Netlify/Vercel).
+
+Visual system is **"Daylight Gilt"** — the warm, gold-on-cream light theme borrowed
+from my GLD app (cream surfaces, warm-ink text, a single deepened-gold accent,
+warm-tinted shadows, Abril Fatface display headings + Plus Jakarta Sans body).
 
 ## Files
 
 ```
 index.html              The whole page (all copy lives here)
-assets/css/styles.css   Styling (colors live in :root at the top)
-assets/js/main.js       Mobile menu + footer year
-assets/img/             Drop a real og-image.png here for nice link previews
-README.md               This file
+assets/css/styles.css   Styling — design tokens live in :root at the top
+assets/js/main.js       Mobile menu, footer year, reveal-on-scroll
+assets/img/             Drop og-image.png + daniel.jpg here
+assets/img/work/        Project screenshots (see that folder's README)
 ```
+
+## Page structure
+
+Hero → **Client work** (Rainier) → **Products I ship** (LeadStart AI, SaaSassins,
+GLD, ReciPal) → **What I do** (capabilities) → **Now** → **About** → **Contact**.
 
 ## Run it locally
 
-Just open `index.html` in a browser. To preview exactly like production with a
-local server:
+Open `index.html` in a browser, or serve it:
 
 ```bash
-# Python (built into macOS/Linux, easy on Windows too)
-python -m http.server 8000
-# then visit http://localhost:8000
+npx serve .          # then open the printed localhost URL
 ```
 
 ## Edit the content
 
-Everything you'd want to change is plain text in `index.html`:
+Everything is plain text in `index.html`:
 
-- **Headline & pitch** — the `<section class="hero">` block.
-- **Services** — the four `<article class="card">` blocks.
-- **About you** — `<section id="about">`.
-- **Process steps** — `<section id="process">`.
-- **FAQ** — `<section id="faq">`.
-- **Contact email / LinkedIn** — `<section id="contact">` and the footer.
+- **Hero headline & intro** — `<section class="hero">`.
+- **Client work** — the `.feature` card in `<section id="work">`.
+- **Products** — the four `.product-card` blocks in `<section id="products">`.
+- **What I do** — the `.cap` blocks in `<section id="approach">`.
+- **Now** — `<section id="now">`. **Keep this fresh** — edit it every month or two
+  and update the "Updated June 2026" line; it's what makes the site feel alive.
+- **About** — `<section id="about">`.
+- **Contact / links** — `<section id="contact">` and the footer.
 
-To change the colors, edit the variables in `:root` at the top of
-`assets/css/styles.css` (the brand is navy `--navy` + amber `--amber`).
+Colors live in the `:root` block at the top of `assets/css/styles.css`.
 
-## Turn on the contact form (2 minutes)
+## Things still to fill in
 
-The form currently posts to a placeholder. To make it email you submissions for
-free:
-
-1. Sign up at <https://formspree.io> and create a form.
-2. Copy your form endpoint (looks like `https://formspree.io/f/abcdwxyz`).
-3. In `index.html`, replace the `action` URL on `<form class="contact-form" ...>`.
-
-That's it — submissions land in your inbox. (Alternatives: Netlify Forms,
-Basin, Web3Forms.) Until then, the `mailto:` link and LinkedIn still work.
+1. **Three live URLs** — `SaaSassins`, `GLD`, and `ReciPal` cards link to `#`
+   placeholders (search `TODO` in `index.html`). Set them to the real URLs.
+2. **Project screenshots** — drop files in `assets/img/work/` and swap each card's
+   placeholder for the commented `<img>` (see `assets/img/work/README.md`).
+3. **Your photo** — add `assets/img/daniel.jpg` and replace the photo placeholder
+   in the About section.
+4. **Contact form** — the form posts to a Formspree placeholder. Create a form at
+   <https://formspree.io>, then paste your endpoint into the `<form action>`.
+5. **og-image** — add `assets/img/og-image.png` (1200×630) for link previews.
 
 ## Deploy on GitHub Pages
 
-1. Create a repo on GitHub and push this folder (see below).
-2. Repo **Settings → Pages → Build and deployment**.
-3. Source: **Deploy from a branch**, Branch: **main**, Folder: **/ (root)**.
-4. Save. Your site goes live at `https://<username>.github.io/<repo>/`.
-
-### Custom domain (optional)
-
-Buy a domain (e.g. `danieltuccillo.com`), then in **Settings → Pages** add it
-under "Custom domain." GitHub will create a `CNAME` file for you. Point your
-domain's DNS at GitHub Pages per their instructions.
+1. Create a repo on GitHub and push this folder.
+2. **Settings → Pages → Build and deployment** → Source: **Deploy from a branch**,
+   Branch: **main**, Folder: **/ (root)**. Save.
+3. Live at `https://<username>.github.io/<repo>/`. Add a custom domain under
+   Settings → Pages when you have one.
 
 ## Push to GitHub
 
@@ -71,8 +73,3 @@ git add .
 git commit -m "Update site"
 git push
 ```
-
----
-
-Built as a starting point — swap in real testimonials, case studies, and a
-booking link (Calendly/Cal.com) as you land your first gigs.
